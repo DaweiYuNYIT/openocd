@@ -714,7 +714,7 @@ m4_define([PROCESS_ADAPTERS], [
 		])
 	], [
 		AS_IF([test "x$ADAPTER_VAR([adapter])" = "xyes"], [
-			AC_MSG_ERROR([$3 is required for the ADAPTER_DESC([adapter])])
+		#	AC_MSG_ERROR([$3 is required for the ADAPTER_DESC([adapter])])
 		])
 		ADAPTER_VAR([adapter])=no
 	])
@@ -859,6 +859,7 @@ AC_SUBST(EXTRA_DIST_NEWS, ["$(echo $srcdir/NEWS-*)"])
 
 AC_CONFIG_FILES([
   Makefile
+  src/Makefile
 ])
 AC_OUTPUT
 
